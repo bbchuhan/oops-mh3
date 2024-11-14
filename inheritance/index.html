@@ -1,0 +1,26 @@
+<script>
+    class Car{
+        constructor(name,price,model,color){
+            this.name = name,
+            this.price = price,
+            this.model = model,
+            this.color = color
+        }
+        getinfo(){
+            console.log(`car name is ${this.name},price is ${this.price}and its model is${this.model}and its color is ${this.color}`)
+        }
+    }
+    class Bmw extends Car{
+        constructor(name,price,model,color,releasedate,ofer){
+            super(name,price,model,color);
+            this.releasedate =releasedate,
+            this.ofer = ofer
+        }
+        getinfo(){
+            super.getinfo();
+            console.log(`release date is ${this.releasedate}and offer is ${this.offer}`)
+        }
+    }
+    let bmw = new Bmw("bmwx","20,00000","n72","gray","2025","10%");
+    bmw.getinfo()
+</script>
